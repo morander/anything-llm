@@ -1,0 +1,8 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "docker/Dockerfile"
+
+[deploy]
+startCommand = "cd /app && npm start"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10

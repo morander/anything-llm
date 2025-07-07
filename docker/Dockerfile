@@ -181,3 +181,7 @@ ENTRYPOINT ["/bin/bash", "/usr/local/bin/docker-entrypoint.sh"]
 # Brand3y: Add MCP configuration
 COPY server/storage/plugins/anythingllm_mcp_servers.json /app/server/storage/plugins/anythingllm_mcp_servers.json
 RUN chown -R anythingllm:anythingllm /app/server/storage/plugins/
+
+# Brand3y: Add MCP configuration
+COPY server/storage/plugins/anythingllm_mcp_servers.json /app/server/storage/plugins/anythingllm_mcp_servers.json
+RUN chown -R anythingllm:anythingllm /app/server/storage/plugins/

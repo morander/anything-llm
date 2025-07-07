@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "facebook-ads": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-facebook-ads"
+      ],
+      "env": {},
+      "anythingllm": {
+        "name": "Facebook Ad Library",
+        "description": "Monitor competitor Facebook advertising campaigns",
+        "autoStart": true
+      }
+    },
+    "web-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      },
+      "anythingllm": {
+        "name": "Web Search",
+        "description": "Real-time web search for brand monitoring",
+        "autoStart": false
+      }
+    }
+  }
+}

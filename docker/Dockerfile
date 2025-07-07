@@ -178,3 +178,6 @@ HEALTHCHECK --interval=1m --timeout=10s --start-period=1m \
 # Run the server
 # CMD ["sh", "-c", "tail -f /dev/null"] # For development: keep container open
 ENTRYPOINT ["/bin/bash", "/usr/local/bin/docker-entrypoint.sh"]
+# Brand3y: Add MCP configuration
+COPY server/storage/plugins/anythingllm_mcp_servers.json /app/server/storage/plugins/anythingllm_mcp_servers.json
+RUN chown -R anythingllm:anythingllm /app/server/storage/plugins/
